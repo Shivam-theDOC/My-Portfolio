@@ -21,7 +21,7 @@ const Hero = () => {
         ease: "power2.inOut",
       }
     );
-  });
+  }, []);
 
   return (
     <section id="hero" className="relative overflow-hidden">

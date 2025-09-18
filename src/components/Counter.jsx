@@ -13,7 +13,7 @@ const Counter = () => {
             >
               <CountUp end={items.value} suffix={items.suffix} />
             </div>
-            <div classname="text-white-50 text-lg">{items.label}</div>
+            <div className="text-white-50 text-lg">{items.label}</div>
           </div>
         ))}
       </div>

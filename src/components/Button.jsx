@@ -2,7 +2,7 @@ const Button = ({ className, id, text }) => {
   return (
     <a
       className={`${className ?? " "} cta-wrapper`}
-      onclick={(e) => {
+      onClick={(e) => {
         e.preventDefault();
 
         const target = document.getElementById("counter");
@@ -10,7 +10,7 @@ const Button = ({ className, id, text }) => {
         if (target && id) {
           const offset = window.innerHeight * 0.15;
           const top =
-            window.pageYOffset + target.getBoundingClientRect().top - offset;
+            window.scrollY + target.getBoundingClientRect().top - offset;
 
           window.scrollTo({ top, behavior: "smooth" });
         }
