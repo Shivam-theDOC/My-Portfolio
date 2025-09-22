@@ -243,7 +243,7 @@ section {
   }
 
   .timeline {
-    @apply absolute z-30 h-[110%] -top-10 w-14 md:w-28 bg-black;
+    @apply absolute z-30 h-[110%] top-10 w-14 md:w-28 bg-black;
   }
 
   .timeline-logo {
@@ -454,6 +454,10 @@ section {
   mask-clip: padding-box, border-box;
   opacity: 0;
   transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
 }
 
 .glow {
@@ -464,8 +468,8 @@ section {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  filter: blur(10px);
-  filter: saturate(200);
+  filter: blur(10px) saturate(200);
+  -webkit-filter: blur(10px) saturate(200);
 }
 
 .card:hover::before {

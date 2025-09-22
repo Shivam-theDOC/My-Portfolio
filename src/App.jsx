@@ -4,6 +4,7 @@ import ExperienceSection from "./sections/ExperienceSection";
 import FeaturedCards from "./sections/FeaturedCards";
 import Hero from "./sections/Hero";
 import ShowcaseSection from "./sections/ShowcaseSection";
+import TechStack from "./sections/TechStack";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
 
       {/* PersonalExperience */}
       <ExperienceSection />
+
+      {/* Teck Stack */}
+      <TechStack />
 
       {/* footer */}
     </>
