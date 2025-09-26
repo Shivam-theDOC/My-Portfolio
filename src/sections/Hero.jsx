@@ -1,4 +1,4 @@
-import HeroExperience from "../components/HeroModels/HeroExperience.jsx";
+import HeroExperience from "../components/Models/HeroModels/HeroExperience.jsx";
 import Button from "../components/Button.jsx";
 import { words } from "../constants/index.js";
 import { useGSAP } from "@gsap/react";
@@ -56,9 +56,10 @@ const Hero = () => {
               <h1>into Real Projects</h1>
               <h1>that Deliver Results</h1>
             </div>
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-              {" "}
-              about yourself{" "}
+            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none wrap-normal">
+              Hi, I’m Shivam. <br />A frontend developer passionate about
+              building <br />
+              clean, modern, and user-friendly web experiences.
             </p>
             <Button
               className="md:w-80 md:h-16 w-60 h-12"
