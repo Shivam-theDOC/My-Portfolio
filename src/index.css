@@ -991,3 +991,58 @@ section {
 /* ============================================ */
 /* CODE EDITOR MODAL STYLES - END */
 /* ============================================ */
+
+
+
+/* ============================================ */
+/* LOADING SCREEN STYLES - START */
+/* ============================================ */
+.loadingScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.loadingScreen__logo {
+  font-size: 80px !important;
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+.loadingScreen__text {
+  margin-top: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #71767b;
+  font-weight: 600;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ============================================ */
+/* LOADING SCREEN STYLES - END */
+/* ============================================ */

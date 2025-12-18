@@ -11,8 +11,8 @@ export function Laptop(props) {
   useEffect(() => {
     if (animations.length) {
       Object.values(actions).forEach((action) => {
-        action.play(); // start animation
-        action.setLoop(THREE.LoopRepeat, Infinity); // loop infinitely
+        action.play();
+        action.setLoop(THREE.LoopRepeat, Infinity);
       });
     }
   }, [actions, animations]);

@@ -118,8 +118,11 @@ const techStackImgs = [
 
 const expCards = [
   {
-    review:
-      "Shivam consistently demonstrated strong ownership of frontend development across multiple enterprise applications. He built clean, reusable React components, followed best practices, and paid close attention to performance and user experience. His ability to translate business requirements into intuitive UI flows made him a reliable contributor within the team.",
+    review: [
+
+      "Shivam worked on large-scale enterprise projects where stability and consistency were critical. He adapted quickly to existing codebases, followed organizational standards, and ensured features were delivered without impacting live users. His professionalism and reliability stood out in client-facing environments.",
+      "While primarily working on the frontend, Shivam also collaborated closely with backend teams to integrate REST APIs, handle data flows, and resolve production issues. His understanding of backend logic helped reduce integration gaps and improved overall delivery quality.",
+    ],
     imgPath: "/images/infosysLogo.png",
     logoPath: "/images/infosysLogo.png",
     title: "Frontend Developer",
@@ -135,7 +138,8 @@ const expCards = [
     ],
   },
   {
-    review: "While primarily working on the frontend, Shivam also collaborated closely with backend teams to integrate REST APIs, handle data flows, and resolve production issues. His understanding of backend logic helped reduce integration gaps and improved overall delivery quality.",
+    review: "Shivam consistently demonstrated strong ownership of frontend development across multiple enterprise applications. He built clean, reusable React components, followed best practices, and paid close attention to performance and user experience. His ability to translate business requirements into intuitive UI flows made him a reliable contributor within the team.",
+
     imgPath: "/images/infosysLogo.png",
     logoPath: "/images/infosysLogo.png",
     title: "Frontend Developer",
@@ -148,19 +152,6 @@ const expCards = [
       " Ensured system reliability by diagnosing and resolving high-priority production issues during peak load periods, strengthening platform stability and reducing operational incidents."
     ],
   },
-  //   {
-  //     review:
-  //       "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-  //     imgPath: "/images/exp3.png",
-  //     logoPath: "/images/logo3.png",
-  //     title: "React Native Developer",
-  //     date: "March 2019 - May 2020",
-  //     responsibilities: [
-  //       "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-  //       "Improved app performance and user experience through code optimization and testing.",
-  //       "Coordinated with the product team to implement features based on feedback.",
-  //     ],
-  //   },
 ];
 
 const expLogos = [
@@ -175,51 +166,6 @@ const expLogos = [
   {
     name: "logo3",
     imgPath: "/images/logo3.png",
-  },
-];
-
-const testimonials = [
-  {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
-    review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
-    imgPath: "/images/client1.png",
-  },
-  {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
-    review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
-    imgPath: "/images/client3.png",
-  },
-  {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
-    review:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    imgPath: "/images/client2.png",
-  },
-  {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
-    review:
-      "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
-    imgPath: "/images/client5.png",
-  },
-  {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
-    review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
-    imgPath: "/images/client4.png",
-  },
-  {
-    name: "Albert Flores",
-    mentions: "@albertflores",
-    review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
-    imgPath: "/images/client6.png",
   },
 ];
 
@@ -243,6 +189,32 @@ const socialImgs = [
   },
 ];
 
+const aboutMeLines = [
+  { type: 'comment', content: '// about.js - Developer Profile' },
+  { type: 'code', content: 'const developer = {' },
+  { type: 'code', content: '  name: "Shivam Singh \'DevDoc\'",' },
+  { type: 'code', content: '  role: "Full Stack Developer",' },
+  { type: 'code', content: '  location: "Remote, Worldwide",' },
+  { type: 'code', content: '  experience: 4, // years' },
+  { type: 'code', content: '  passionate: true,' },
+  { type: 'empty', content: '' },
+  { type: 'code', content: '  getBio() {' },
+  { type: 'code', content: '    return `' },
+  { type: 'code', content: '      I\'m a passionate developer who loves crafting' },
+  { type: 'code', content: '      elegant solutions to complex problems.' },
+  { type: 'code', content: '      When I\'m not coding, you\'ll find me exploring' },
+  { type: 'code', content: '      new technologies or contributing to open source.' },
+  { type: 'code', content: '    `;' },
+  { type: 'code', content: '  },' },
+  { type: 'empty', content: '' },
+  { type: 'code', content: '  getCurrentFocus() {' },
+  { type: 'code', content: '    return ["React", "Node.js", "System Design"];' },
+  { type: 'code', content: '  }' },
+  { type: 'code', content: '};' },
+  { type: 'empty', content: '' },
+  { type: 'code', content: 'export default developer;' }
+];
+
 export {
   words,
   abilities,
@@ -250,8 +222,8 @@ export {
   counterItems,
   expCards,
   expLogos,
-  testimonials,
   socialImgs,
   techStackImgs,
   navLinks,
+  aboutMeLines
 };

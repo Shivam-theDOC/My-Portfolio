@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { SantaHat, ChristmasLights } from "./ChristmasTheme";
 import { navLinks } from "../constants/index.js";
+import CodeEditorModal from "./CodeEditorModal.jsx";
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,34 +15,52 @@ const NavBar = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  return (
-    <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
-      <ChristmasLights />
-      <div className="inner">
-        <a href="#hero" className="logo relative group">
-          Shivam Singh
-          <SantaHat />
-        </a>
-        <nav className="desktop">
-          <ul>
-            {navLinks.map(({ link, name }) => (
-              <li key={name} className="group">
-                <a href={link}>
-                  <span>{name}</span>
-                  <span className="underline"></span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
 
-        <a href="#contact" className="contact-btn group">
-          <div className="inner">
-            <span>Contact me</span>
-          </div>
-        </a>
-      </div>
-    </header>
+  return (
+    <>
+      {/* ================= ABOUT MODAL ================= */}
+      {isAboutOpen && (
+        <CodeEditorModal isOpen={isAboutOpen} onClose={() => setIsAboutOpen(false)} />
+      )}
+      {/* =============================================== */}
+
+      <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
+        <ChristmasLights />
+        <div className="inner">
+          <a href="#hero" className="logo relative group">
+            Shivam Singh
+            <SantaHat />
+          </a>
+
+          <nav className="desktop">
+            <ul>
+              {navLinks.map(({ link, name }) => (
+                <li key={name} className="group">
+                  <a
+                    href={link}
+                    onClick={(e) => {
+                      if (link === "#about") {
+                        e.preventDefault();
+                        setIsAboutOpen(true);
+                      }
+                    }}
+                  >
+                    <span>{name}</span>
+                    <span className="underline"></span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          <a href="#contact" className="contact-btn group">
+            <div className="inner">
+              <span>Contact me</span>
+            </div>
+          </a>
+        </div>
+      </header>
+    </>
   );
 };
 
