@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -32,37 +32,17 @@ function App() {
   return (
     <ReactLenis root>
 
-      {/* Snow Effect */}
       <Snow />
-      {/* nav */}
       <NavBar />
-
-      {/* hero */}
       <Hero />
-
-      {/* Teck Stack */}
       <TechStack />
-
-      {/* LogoSection */}
       <LogoSection />
-
-      {/* showcase */}
       <ShowcaseSection />
-
-
-      {/* FeaturedCards */}
       <FeaturedCards />
-
-      {/* PersonalExperience */}
       <ExperienceSection />
-
-
-
-      {/* Contact Me */}
       <ContactMe />
-
-      {/* footer */}
       <Footer />
+
     </ReactLenis>
   );
 }
