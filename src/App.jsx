@@ -1,3 +1,6 @@
+import { ReactLenis } from "lenis/react";
+import { useState, useEffect } from "react";
+import { Snow } from "./components/ChristmasTheme";
 import LogoSection from "./components/LogoSection";
 import NavBar from "./components/NavBar";
 import ContactMe from "./sections/ContactMe";
@@ -8,20 +11,44 @@ import Hero from "./sections/Hero";
 import ShowcaseSection from "./sections/ShowcaseSection";
 import TechStack from "./sections/TechStack";
 
+
+import LoadingScreen from "./components/Loading";
+
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
   return (
-    <>
+    <ReactLenis root>
+
+      {/* Snow Effect */}
+      <Snow />
       {/* nav */}
       <NavBar />
 
       {/* hero */}
       <Hero />
 
-      {/* showcase */}
-      <ShowcaseSection />
+      {/* Teck Stack */}
+      <TechStack />
 
       {/* LogoSection */}
       <LogoSection />
+
+      {/* showcase */}
+      <ShowcaseSection />
+
 
       {/* FeaturedCards */}
       <FeaturedCards />
@@ -29,15 +56,14 @@ function App() {
       {/* PersonalExperience */}
       <ExperienceSection />
 
-      {/* Teck Stack */}
-      <TechStack />
+
 
       {/* Contact Me */}
       <ContactMe />
 
       {/* footer */}
       <Footer />
-    </>
+    </ReactLenis>
   );
 }
 

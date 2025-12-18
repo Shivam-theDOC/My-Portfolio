@@ -1,14 +1,18 @@
-import { useGLTF, useTexture } from "@react-three/drei";
+import { useGLTF, useTexture, useVideoTexture } from "@react-three/drei";
 import { EffectComposer, SelectiveBloom } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
-import { useRef, useEffect } from "react";
-import { useFrame } from "@react-three/fiber";
+import { useRef } from "react";
 import * as THREE from "three";
 
 export function Room2(props) {
   const { nodes, materials } = useGLTF("/models/optimized-room.glb");
   const screensRef = useRef();
   const matcapTexture = useTexture("/images/textures/mat1.png");
+  const videoTexture = useVideoTexture("/videos/codebg1.mp4", {
+    loop: true,
+    muted: true,
+    start: true,
+  });
 
   const curtainMaterial = new THREE.MeshPhongMaterial({ color: "#d90429" });
   const bodyMaterial = new THREE.MeshPhongMaterial({ map: matcapTexture });
@@ -18,30 +22,8 @@ export function Room2(props) {
   const pillowMaterial = new THREE.MeshPhongMaterial({ color: "#8338ec" });
   const chairMaterial = new THREE.MeshPhongMaterial({ color: "#000" });
 
-  const videoRef = useRef(document.createElement("video"));
-  const videoTextureRef = useRef();
-
-  useEffect(() => {
-    videoRef.current.src = "/videos/codebg1.mp4";
-    videoRef.current.crossOrigin = "Anonymous";
-    videoRef.current.loop = true;
-    videoRef.current.muted = true;
-    videoRef.current.play();
-
-    videoTextureRef.current = new THREE.VideoTexture(videoRef.current);
-    videoTextureRef.current.minFilter = THREE.LinearFilter;
-    videoTextureRef.current.magFilter = THREE.LinearFilter;
-    videoTextureRef.current.format = THREE.RGBAFormat;
-  }, []);
-
-  useFrame(() => {
-    if (videoTextureRef.current) {
-      videoTextureRef.current.needsUpdate = true;
-    }
-  });
-
   const pcMaterial = new THREE.MeshBasicMaterial({
-    map: videoTextureRef.current,
+    map: videoTexture,
   });
 
   return (

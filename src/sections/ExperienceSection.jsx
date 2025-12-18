@@ -66,9 +66,23 @@ const ExperienceSection = () => {
             {expCards.map((card, index) => (
               <div key={card.title} className="exp-card-wrapper">
                 <div className="md:w-2/6">
-                  <GlowCards card={card} index={index}>
-                    <img src={card.title} alt={card.title} />
-                  </GlowCards>
+                  {Array.isArray(card.review) ? (
+                    card.review.map((review, i) => (
+                      <div
+                        key={i}
+                        className={`${i !== card.review.length - 1 ? "mb-10" : ""
+                          }`}
+                      >
+                        <GlowCards card={{ ...card, review }} index={index}>
+                          {/* <img src={card.imgPath} alt={card.title} /> */}
+                        </GlowCards>
+                      </div>
+                    ))
+                  ) : (
+                    <GlowCards card={card} index={index}>
+                      {/* <img src={card.imgPath} alt={card.title} /> */}
+                    </GlowCards>
+                  )}
                 </div>
                 <div className="xl:w-4/6">
                   <div className="flex items-start">

@@ -1,42 +1,22 @@
-import { OrbitControls } from "@react-three/drei";
+import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
 
-import Computer from "./Computer";
+import { Laptop } from "./Laptop";
 
 const ContactExperience = () => {
   return (
-    <Canvas shadows camera={{ position: [0, 3, 7], fov: 45 }}>
-      <ambientLight intensity={0.5} color="#fff4e6" />
-
-      <directionalLight position={[5, 5, 3]} intensity={2.5} color="#ffd9b3" />
-
-      <directionalLight
-        position={[5, 9, 1]}
-        castShadow
-        intensity={2.5}
-        color="#ffd9b3"
-      />
-
-      <OrbitControls
-        enableZoom={false}
-        minPolarAngle={Math.PI / 5}
-        maxPolarAngle={Math.PI / 2}
-      />
-
-      <group scale={[1, 1, 1]}>
-        <mesh
-          receiveShadow
-          position={[0, -1.5, 0]}
-          rotation={[-Math.PI / 2, 0, 0]}
-        >
-          <planeGeometry args={[30, 30]} />
-          <meshStandardMaterial color="#a46b2d" />
-        </mesh>
-      </group>
-
-      <group scale={0.03} position={[0, -1.49, -2]} castShadow>
-        <Computer />
-      </group>
+    <Canvas camera={{ position: [0, 0, 5], fov: 30 }} dpr={[1, 1.5]}>
+      <ambientLight intensity={1} />
+      <directionalLight position={[10, 10, 5]} intensity={2} />
+      <OrbitControls enableZoom={false} />
+      <Suspense fallback={null}>
+        <group position={[1.9, -1.1, .5]} scale={0.7} rotation={[0.6, -0.5, 0]}>
+          <Laptop />
+        </group>
+        <Environment preset="city" />
+        <ContactShadows position={[0, -4.5, 0]} opacity={0.4} scale={20} blur={2} far={4.5} />
+      </Suspense>
     </Canvas>
   );
 };
