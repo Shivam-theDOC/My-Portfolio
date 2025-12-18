@@ -4,7 +4,7 @@ import { Canvas } from "@react-three/fiber";
 const TechIcon = ({ model }) => {
   const scene = useGLTF(model.modelPath);
   return (
-    <Canvas>
+    <Canvas dpr={[1, 2]}>
       <ambientLight intensity={0.3} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
 

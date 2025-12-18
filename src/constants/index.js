@@ -1,5 +1,9 @@
 const navLinks = [
   {
+    name: "About Me",
+    link: "#about",
+  },
+  {
     name: "Work",
     link: "#work",
   },
@@ -10,10 +14,6 @@ const navLinks = [
   {
     name: "Skills",
     link: "#skills",
-  },
-  {
-    name: "Testimonials",
-    link: "#testimonials",
   },
 ];
 
@@ -37,38 +37,41 @@ const counterItems = [
 
 const logoIconsList = [
   {
-    imgPath: "/images/logos/company-logo-1.png",
+    imgPath: "/images/tech-logos/tech-logo-1.png",
   },
-  // {
-  //   imgPath: "/images/logos/company-logo-2.png",
-  // },
-  // {
-  //   imgPath: "/images/logos/company-logo-3.png",
-  // },
-  // {
-  //   imgPath: "/images/logos/company-logo-4.png",
-  // },
-  // {
-  //   imgPath: "/images/logos/company-logo-5.png",
-  // },
-  // {
-  //   imgPath: "/images/logos/company-logo-6.png",
-  // },
-  // {
-  //   imgPath: "/images/logos/company-logo-7.png",
-  // },
-  // {
-  //   imgPath: "/images/logos/company-logo-8.png",
-  // },
-  // {
-  //   imgPath: "/images/logos/company-logo-9.png",
-  // },
-  // {
-  //   imgPath: "/images/logos/company-logo-10.png",
-  // },
-  // {
-  //   imgPath: "/images/logos/company-logo-11.png",
-  // },
+  {
+    imgPath: "/images/tech-logos/tech-logo-2.png",
+  },
+  {
+    imgPath: "/images/tech-logos/tech-logo-3.png",
+  },
+  {
+    imgPath: "/images/tech-logos/tech-logo-4.png",
+  },
+  {
+    imgPath: "/images/tech-logos/tech-logo-5.png",
+  },
+  {
+    imgPath: "/images/tech-logos/tech-logo-6.png",
+  },
+  {
+    imgPath: "/images/tech-logos/tech-logo-7.png",
+  },
+  {
+    imgPath: "/images/tech-logos/tech-logo-8.png",
+  },
+  {
+    imgPath: "/images/tech-logos/tech-logo-9.png",
+  },
+  {
+    imgPath: "/images/tech-logos/tech-logo-10.png",
+  },
+  {
+    imgPath: "/images/tech-logos/tech-logo-11.png",
+  },
+  {
+    imgPath: "/images/tech-logos/tech-logo-12.png",
+  },
 ];
 
 const abilities = [
@@ -91,91 +94,60 @@ const abilities = [
 
 const techStackImgs = [
   {
-    name: "React Developer",
-    imgPath: "/images/logos/react.png",
+    name: "MongoDB",
+    imgPath: "/images/tech-logos/mongodb.png",
   },
   {
-    name: "Python Developer",
-    imgPath: "/images/logos/python.svg",
+    name: "Express",
+    imgPath: "/images/tech-logos/expressjs.png",
   },
   {
-    name: "Backend Developer",
-    imgPath: "/images/logos/node.png",
+    name: "React",
+    imgPath: "/images/tech-logos/react.png",
   },
   {
-    name: "Interactive Developer",
-    imgPath: "/images/logos/three.png",
+    name: "Node",
+    imgPath: "/images/tech-logos/node.png",
   },
   {
-    name: "Project Manager",
-    imgPath: "/images/logos/git.svg",
+    name: "Next.js",
+    imgPath: "/images/tech-logos/nextjs.png",
   },
 ];
 
-const techStackIcons = [
-  {
-    name: "React Developer",
-    modelPath: "/models/react_logo-transformed.glb",
-    scale: 1,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Python Developer",
-    modelPath: "/models/nextjs_logo.glb",
-    scale: 0.8,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Backend Developer",
-    modelPath: "/models/node-transformed.glb",
-    scale: 5,
-    rotation: [0, -Math.PI / 2, 0],
-  },
-  {
-    name: "Interactive Developer",
-    modelPath: "/models/three.js-transformed.glb",
-    scale: 0.05,
-    rotation: [0, 0, 0],
-  },
-  {
-    name: "Project Manager",
-    modelPath: "/models/git-svg-transformed.glb",
-    scale: 0.05,
-    rotation: [0, -Math.PI / 4, 0],
-  },
-];
 
 const expCards = [
   {
     review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
+      "Shivam consistently demonstrated strong ownership of frontend development across multiple enterprise applications. He built clean, reusable React components, followed best practices, and paid close attention to performance and user experience. His ability to translate business requirements into intuitive UI flows made him a reliable contributor within the team.",
+    imgPath: "/images/infosysLogo.png",
     logoPath: "/images/infosysLogo.png",
     title: "Frontend Developer",
-    date: "May 2022 - Present",
+    date: "November 2023 - Present",
     responsibilities: [
-      "Designed and implemented full-stack web application with React.js and JavaScript, tailored for financial use cases with responsive, user-centric interfaces.",
-      "Created and standardized 10+ reusable training templates, documentation, and interactive prototypes, significantly improving intern onboarding efficiency by 30% through clearer workflows and structured learning paths.",
-      "Contributed to Agile workflows, including daily stand-ups, sprint planning, and code/content reviews, ensuring timely delivery of project milestones.",
-      " Implemented key performance indicators (KPIs) within a financial admin dashboard, enabling real-time tracking of user activity, onboarding progress, and content effectiveness.",
-      "Integrated complex APIs (e.g., payment gateways and mapping tools) to enhance app functionality and user experience across 500+ users.",
-      "Led and mentored a team of 3 developers, providing guidance in learning and developing complex components, fostering skills growth, and ensuring successful delivery of high-quality solutions. This mentorship helped the team consistently meet deadlines, complete tasks on time, and deliver high-quality results within Agile sprint cycles.",
-      "Implemented a micro-frontend architecture, developing major services across both frontend and FastAPI backend, ensuring scalability, modularity, and maintainability of the platform.",
+      "Designed, developed, and maintained scalable enterprise applications for financial and insurance clients using React.js, Redux, and REST API.Improved cross - device reliability and consistently delivered high - performance user experiences.",
+      "Built and standardized reusable micro-frontend modules adopted across multiple teams, enhancing platform consistency, maintainability, and long-term scalability across enterprise workflows.",
+      "Implemented multi-language support by configuring localization files such as en.json for English and corresponding files for other languages.",
+      "Optimized React component rendering and state management across 30+ screens, reducing unnecessary rerenders and improving UI responsiveness by 30%.",
+      "Led and mentored a team of 3 developers, guiding component architecture, debugging practices, code reviews, and sprint planning to ensure consistent and high-quality delivery.",
+      "Collaborated across cross-functional Agile teams—participating in daily stand-ups, sprint planning, refinement, and peer reviews—contributing to efficient delivery of scalable features.",
+      " Ensured system reliability by diagnosing and resolving high-priority production issues during peak load periods, strengthening platform stability and reducing operational incidents.",
     ],
   },
-  //   {
-  //     review:
-  //       "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-  //     imgPath: "/images/exp2.png",
-  //     logoPath: "/images/logo2.png",
-  //     title: "Full Stack Developer",
-  //     date: "June 2020 - December 2023",
-  //     responsibilities: [
-  //       "Led the development of Docker's web applications, focusing on scalability.",
-  //       "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-  //       "Contributed to open-source projects that were used with the Docker ecosystem.",
-  //     ],
-  //   },
+  {
+    review: "While primarily working on the frontend, Shivam also collaborated closely with backend teams to integrate REST APIs, handle data flows, and resolve production issues. His understanding of backend logic helped reduce integration gaps and improved overall delivery quality.",
+    imgPath: "/images/infosysLogo.png",
+    logoPath: "/images/infosysLogo.png",
+    title: "Frontend Developer",
+    date: "May 2022 - November 2023",
+    responsibilities: [
+      "Fixed UI bugs, improved layout consistency, and implemented small features.",
+      "Collaborated with senior developers to understand project workflows and best practices",
+      "Developed KPI-driven admin dashboards with real-time insights into onboarding, usage analytics, and operational efficiency",
+      "Created, documented, and deployed 10+ onboarding templates, training assets, and process frameworks.",
+      " Ensured system reliability by diagnosing and resolving high-priority production issues during peak load periods, strengthening platform stability and reducing operational incidents."
+    ],
+  },
   //   {
   //     review:
   //       "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
@@ -253,20 +225,21 @@ const testimonials = [
 
 const socialImgs = [
   {
-    name: "insta",
-    imgPath: "/images/insta.png",
+    name: "linkedin",
+    imgPath: "/images/linkedin.png",
+    url: "https://www.linkedin.com/in/dev-shivamsingh/",
   },
   {
-    name: "fb",
-    imgPath: "/images/fb.png",
+    name: "github",
+    imgPath: "/images/github.png",
   },
   {
     name: "x",
     imgPath: "/images/x.png",
   },
   {
-    name: "linkedin",
-    imgPath: "/images/linkedin.png",
+    name: "insta",
+    imgPath: "/images/insta.png",
   },
 ];
 
@@ -279,7 +252,6 @@ export {
   expLogos,
   testimonials,
   socialImgs,
-  techStackIcons,
   techStackImgs,
   navLinks,
 };

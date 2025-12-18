@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { SantaHat, ChristmasLights } from "./ChristmasTheme";
 import { navLinks } from "../constants/index.js";
 
 const NavBar = () => {
@@ -6,9 +7,7 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const isScrolled = window.screenY > 10;
-
-      setScrolled(true);
+      setScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
 
@@ -16,9 +15,11 @@ const NavBar = () => {
   }, []);
   return (
     <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
+      <ChristmasLights />
       <div className="inner">
-        <a href="#hero" className="logo">
+        <a href="#hero" className="logo relative group">
           Shivam Singh
+          <SantaHat />
         </a>
         <nav className="desktop">
           <ul>

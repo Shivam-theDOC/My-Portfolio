@@ -1,7 +1,7 @@
 import { useGLTF, useTexture } from "@react-three/drei";
 import { EffectComposer, SelectiveBloom } from "@react-three/postprocessing";
 import { BlendFunction } from "postprocessing";
-import { useRef, useEffect, useMemo } from "react";
+import { useRef, useMemo } from "react";
 import * as THREE from "three";
 
 export function Room3(props) {

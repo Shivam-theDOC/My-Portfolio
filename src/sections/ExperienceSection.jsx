@@ -67,7 +67,7 @@ const ExperienceSection = () => {
               <div key={card.title} className="exp-card-wrapper">
                 <div className="md:w-2/6">
                   <GlowCards card={card} index={index}>
-                    <img src={card.title} alt={card.title} />
+                    {/* <img src={card.imgPath} alt={card.title} /> */}
                   </GlowCards>
                 </div>
                 <div className="xl:w-4/6">

@@ -1,8 +1,7 @@
 import { useGSAP } from "@gsap/react";
-import TechIcon from "../components/Models/TechLogos/TechIcon";
-import Title from "../components/Title";
-import { techStackIcons, techStackImgs } from "../constants/index.js";
 import gsap from "gsap";
+import Title from "../components/Title";
+import { techStackImgs } from "../constants/index.js";
 
 const TechStack = () => {
   useGSAP(() => {
@@ -29,27 +28,11 @@ const TechStack = () => {
     <div className="flex-center section-padding" id="skills">
       <div className="w-full h-full md:px-10 px-5">
         <Title
-          title="My Preffered Tech Stack"
+          title="My Preferred Tech Stack"
           sub="🤝 What Skills I Bring to the Table"
         />
         <div className="tech-grid">
-          {techStackIcons.map((icon) => (
-            <div
-              className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
-              key={icon.name}
-            >
-              <div className="tech-card-animated-bg" />
-              <div className="tech-card-content">
-                <div className="tech-icon-wrapper">
-                  <TechIcon model={icon} />
-                </div>
-                <div className="padding-x w-full">
-                  <p>{icon.name}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-          {/* 
+
           {techStackImgs.map((techStackIcon, index) => (
             <div
               key={index}
@@ -65,7 +48,7 @@ const TechStack = () => {
                 </div>
               </div>
             </div>
-          ))} */}
+          ))}
         </div>
       </div>
     </div>

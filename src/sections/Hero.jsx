@@ -1,9 +1,8 @@
-import HeroExperience from "../components/Models/HeroModels/HeroExperience.jsx";
-import Button from "../components/Button.jsx";
-import { words } from "../constants/index.js";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import Counter from "../components/Counter.jsx";
+import Button from "../components/Button.jsx";
+import HeroExperience from "../components/Models/HeroModels/HeroExperience.jsx";
+import { words } from "../constants/index.js";
 
 const Hero = () => {
   useGSAP(() => {
@@ -57,7 +56,7 @@ const Hero = () => {
               <h1>that Deliver Results</h1>
             </div>
             <p className="text-white-50 md:text-xl relative z-10 pointer-events-none wrap-normal">
-              Hi, I’m Shivam. <br />A frontend developer passionate about
+              Hi, I’m Shivam. <br />A full stack developer passionate about
               building <br />
               clean, modern, and user-friendly web experiences.
             </p>
@@ -78,7 +77,6 @@ const Hero = () => {
         {/* right content */}
       </div>
 
-      <Counter />
     </section>
   );
 };
