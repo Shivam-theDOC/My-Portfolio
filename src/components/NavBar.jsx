@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { SantaHat, ChristmasLights } from "./ChristmasTheme";
+import { SantaHat, ChristmasLights } from "../themes/ChristmasTheme.jsx";
 import { navLinks } from "../constants/index.js";
 import CodeEditorModal from "./CodeEditorModal.jsx";
 
@@ -25,11 +25,11 @@ const NavBar = () => {
       {/* =============================================== */}
 
       <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
-        <ChristmasLights />
+       
         <div className="inner">
           <a href="#hero" className="logo relative group">
             Shivam Singh
-            <SantaHat />
+           
           </a>
 
           <nav className="desktop">

@@ -1,6 +1,5 @@
 import { ReactLenis } from "lenis/react";
-import { useState, useEffect } from "react";
-import { Snow } from "./components/ChristmasTheme";
+import { useEffect, useState } from "react";
 import LogoSection from "./components/LogoSection";
 import NavBar from "./components/NavBar";
 import ContactMe from "./sections/ContactMe";
@@ -31,8 +30,7 @@ function App() {
 
   return (
     <ReactLenis root>
-
-      <Snow />
+      
       <NavBar />
       <Hero />
       <TechStack />
